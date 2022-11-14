@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    background: linear-gradient(120deg, #4803df,red, #0bc433, yellow);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(blue, green, yellow);
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(blue, green, yellow, blue);
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgb(236, 17, 6);
+    animation: glisse 100s infinite;
+}
+@keyframes glisse{
+    100% {
+        background-position: 0px -3000px;
+    }
+}
+.coeur-carre {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    margin-top: 20px;
+    animation: battre 2s infinite;
+}
+
+@keyframes battre {
+    0% {        
+        transform:scale(1) rotate(-45deg);
+    }
+    50% {
+        transform:scale(1.1) rotate(-45deg);
+    }
+    100% {        
+        transform:scale(1.3) rotate(-45deg);
+        
+    }
+
+}
+.cercle1, .cercle2 {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 50%;
+    
+}
+
+.cercle1 {
+    position: absolute;
+    left:50%;
+}
+.cercle2 {
+    position: absolute;
+    bottom: 50%;
+   
+}
